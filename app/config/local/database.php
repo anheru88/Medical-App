@@ -22,13 +22,13 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'homestead',
-			'username'  => 'homestead',
-			'password'  => 'secret',
+			'host'      => getenv('DB_HOST') ?: 'localhost',
+			'database'  => getenv('DB_DATABASE') ?: 'homestead',
+			'username'  => getenv('DB_USERNAME') ?: 'homestead',
+			'password'  => getenv('DB_PASSWORD') ?: 'secret',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			'prefix'    => getenv('DB_PRFIX') ?: '',
 		),
 
 		'pgsql' => array(

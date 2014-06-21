@@ -15,7 +15,7 @@ return array(
 
 	'debug' => true,
 
-    'key' => 'YourSecretKey!!!',
+    'key' => getenv('KEY_LARAVEL') ?: 'YourSecretKey!!!',
 
     'providers' => array(
         'Illuminate\Foundation\Providers\ArtisanServiceProvider',
